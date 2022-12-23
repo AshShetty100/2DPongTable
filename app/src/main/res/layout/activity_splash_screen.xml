@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    tools:context=".SplashScreen">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="440dp"
+        android:layout_height="315dp"
+        android:foregroundGravity="center_horizontal"
+        android:src="@drawable/tech_unifire2" />
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="121dp"
+        android:layout_height="38dp"
+        android:layout_gravity="center"
+        android:fontFamily="sans-serif-medium"
+        android:shadowColor="#000000"
+        android:text="ASHOK"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textColorHighlight="#000000"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/textview2"
+        android:layout_width="wrap_content"
+        android:layout_height="46dp"
+        android:layout_gravity="center"
+        android:fontFamily="sans-serif-medium"
+        android:shadowColor="#000000"
+        android:text="SHREYA &amp; ANJALI"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textColorHighlight="#000000"
+        android:textSize="30dp" />
+
+</LinearLayout>
