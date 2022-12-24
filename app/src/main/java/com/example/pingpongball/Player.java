@@ -4,9 +4,11 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.RectF;
 
+//player class
 public class Player {
-   //we declared the members(variables and objects)
-   //3 members are private and 2 members public
+
+   //we declared the members(3 variables and 2 objects)
+   //3 members are private and 2 members are public
     private int racquetWidth;
     private int racquetHeight;
     public int score;

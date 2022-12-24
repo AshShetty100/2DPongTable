@@ -13,12 +13,14 @@ public class Ball {
     public float velocity_x;
     public float velocity_y;
 
-    //we need radius and paint to draw the ball ,so we declared that variables
-    //private variables
+    //we need radius and paint to draw the ball
+    //so we declared the radius variable and paint object
+    //both of them are private
     private int radius;
     private Paint paint;
 
     //we create a constructor(parameterized) to get the value of radius and paint
+    //and that value will initialized by local var to instance var
     public Ball(int radius,Paint paint) {
         this.radius = radius;
         this.paint = paint;
