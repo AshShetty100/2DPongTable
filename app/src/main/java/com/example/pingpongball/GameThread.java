@@ -16,10 +16,11 @@ public class GameThread extends Thread {
 
     //we initialize all the ,which we required in game
     public static final int STATE_READY = 0;
-    public static final int STATE_PAUSED = 1;
-    public static final int STATE_RUNNING = 2;
-    public static final int STATE_WIN = 3;
-    public static final int STATE_LOSE = 4;
+    public static final int STATE_RUNNING = 1;
+    public static final int STATE_WIN = 2;
+    public static final int STATE_LOSE = 3;
+    public static final int STATE_GameOverWin = 4;
+    public static final int STATE_GameOverLoss = 5;
 
 
     private boolean mSensorsOn;
@@ -115,18 +116,26 @@ public class GameThread extends Thread {
 
                 case STATE_WIN:
                     setStatusText(res.getString(R.string.mode_win));
-                    mPongTable.getPlayer().score++;
+                    mPongTable.getPlayer().PlayerScore++;
                     setUpNewRound();
                     break;
 
                 case STATE_LOSE:
                     setStatusText(res.getString(R.string.mode_loss));
-                    mPongTable.getmOpponent().score++;
+                    mPongTable.getmOpponent().OpponentScore++;
                     setUpNewRound();
                     break;
 
-                case STATE_PAUSED:
-                    setStatusText(res.getString(R.string.mode_paused));
+                case STATE_GameOverWin:
+                    setStatusText(res.getString(R.string.mode_GameOverWin));
+                    setRunning(false);
+                    mPongTable.WinJump();
+                    break;
+
+                case STATE_GameOverLoss:
+                    setStatusText(res.getString(R.string.mode_GameOverLoss));
+                    setRunning(false);
+                    mPongTable.LossJump();
                     break;
             }
         }

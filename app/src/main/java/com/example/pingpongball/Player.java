@@ -11,7 +11,8 @@ public class Player {
    //3 members are private and 2 members are public
     private int racquetWidth;
     private int racquetHeight;
-    public int score;
+    public int PlayerScore;
+    public int OpponentScore;
     private Paint paint;
 
     public RectF bounds;
@@ -23,7 +24,8 @@ public class Player {
         this.racquetWidth = racquetWidth;
         this.racquetHeight = racquetHeight;
         this.paint = paint;
-        score = 0;
+        PlayerScore = 0;
+        OpponentScore = 0;
         bounds = new RectF(0, 0, racquetWidth, racquetHeight);
     }
 

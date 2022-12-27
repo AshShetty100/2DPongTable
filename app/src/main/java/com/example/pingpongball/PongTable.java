@@ -2,6 +2,7 @@ package com.example.pingpongball;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -132,6 +133,25 @@ public class PongTable extends SurfaceView implements SurfaceHolder.Callback {
         mAiMoveProbability = 0.8f;
 
     }
+    public void mscore() {
+        if (getPlayer().PlayerScore == 5) {
+            mGame.setState(GameThread.STATE_GameOverWin);
+            return;
+        } else if (getmOpponent().OpponentScore == 5) {
+            mGame.setState(GameThread.STATE_GameOverLoss);
+            return;
+        }
+    }
+
+    public void WinJump(){
+        Intent intent = new Intent(mContext, GameOverWin.class);
+        mContext.startActivity(intent);
+    }
+
+    public void LossJump(){
+        Intent intent = new Intent(mContext, GameOverLoss.class);
+        mContext.startActivity(intent);
+    }
 
 
     //we use this method to draw all things with the help of canvas
@@ -148,13 +168,14 @@ public class PongTable extends SurfaceView implements SurfaceHolder.Callback {
         canvas.drawLine(middle,1,middle,mTableHeight-1,mNetPaint);
 
 
-        mGame.setScoreText(String.valueOf(mPlayer.score),String.valueOf(mOpponent.score));
+        mGame.setScoreText(String.valueOf(mPlayer.PlayerScore),String.valueOf(mOpponent.OpponentScore));
 
 
      //this will draw our both players and ball by the help of canvas
         mPlayer.draw(canvas);
         mOpponent.draw(canvas);
         mBall.draw(canvas);
+        mscore();
 
     }
 

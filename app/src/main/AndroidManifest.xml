@@ -13,17 +13,25 @@
         android:theme="@style/Theme.Design.NoActionBar"
         tools:targetApi="31">
         <activity
+            android:name=".GameOverWin"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".GameOverLoss"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/AppTheme" />
+        <activity
             android:name=".GameActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".PongActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="sensorLandscape"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".SplashScreen"
             android:configChanges="keyboardHidden|orientation|screenSize"
@@ -40,7 +48,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
     </application>
 
 </manifest>
