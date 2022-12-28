@@ -134,10 +134,10 @@ public class PongTable extends SurfaceView implements SurfaceHolder.Callback {
 
     }
     public void mscore() {
-        if (getPlayer().PlayerScore == 5) {
+        if (getPlayer().PlayerScore == 1) {
             mGame.setState(GameThread.STATE_GameOverWin);
             return;
-        } else if (getmOpponent().OpponentScore == 5) {
+        } else if (getmOpponent().OpponentScore == 1) {
             mGame.setState(GameThread.STATE_GameOverLoss);
             return;
         }

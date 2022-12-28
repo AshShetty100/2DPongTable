@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/red">
+    android:background="@drawable/game_over_background">
 
 
     <TextView
@@ -43,18 +43,70 @@
         app:layout_constraintVertical_bias="0.375"
         tools:ignore="UnknownIdInLayout" />
 
+
     <TextView
         android:id="@+id/Status"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="199dp"
+        android:layout_height="64dp"
         android:text="you loss"
         android:textColor="#fff"
-        android:textSize="35sp"
+        android:textSize="40sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.53"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.664" />
+        app:layout_constraintVertical_bias="0.648" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="324dp"
+        android:layout_height="54dp"
+        android:text="Your Game Status"
+        android:textSize="30sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.597"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.044" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="135dp"
+        android:layout_height="73dp"
+        android:background="@drawable/button"
+        android:onClick="startGame"
+        android:text="Play Again"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.369"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.905" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="116dp"
+        android:layout_height="84dp"
+        android:background="@drawable/button"
+        android:onClick="Exit"
+        android:text="Exit"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.618"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.908" />
+
+    +
 
 </androidx.constraintlayout.widget.ConstraintLayout>
